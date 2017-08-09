@@ -7,57 +7,13 @@ struct int_list {
 	int capacity;
 	int _size;
 	int *data;
-
-	int (*append)(struct int_list*, const int);
-	int (*size)(const struct int_list*);
-	int (*get)(const struct int_list*, const int);
-	int* (*to_int_array)(const struct int_list*);
-	char* (*str)(const struct int_list*);
-	void (*print)(const struct int_list*);
 };
-
-	
-void new(struct int_list* l, const int nb);
-int append(struct int_list *l, const int n);
-int size(const struct int_list *l);
-int get(const struct int_list *l, const int i);
-int* to_int_array(const struct int_list*);
-char* str(const struct int_list* l);
-void print(const struct int_list *l);
-
-
-int main(int argc, char *argv[]) {
-	if(argc == 1) {
-		fprintf(stderr, "USAGE: %s ARGS...\nWhere ARGS will be the elements inserted in the list\nInvalid integers => 0\n", argv[0]);
-		return 1;
-	}
-	struct int_list l;
-	new(&l, argc - 1);
-
-	char **s = argv;
-	int n;
-	while(*++s) {
-		sscanf(*s, "%d", &n);
-		l.append(&l, n);
-	}
-	char *str = l.str(&l);
-	printf("l.str() =   \"%s\"\n", str);
-	printf("l.print() = \"");
-	l.print(&l);
-	printf("\"\n");
-	return 0;
-}
 
 
 void new(struct int_list* l, const int nb) {
 	l->capacity = nb;
 	l->_size = 0;
 	l->data = calloc(nb, sizeof(nb));
-
-	l->append = &append;
-	l->size = &size;
-	l->str = &str;
-	l->print = &print;
 }
 
 int append(struct int_list *l, const int n) {
@@ -103,5 +59,28 @@ char* str(const struct int_list* l) {
 	free(el);
 
 	return s;
+}
+
+
+int main(int argc, char *argv[]) {
+	if(argc == 1) {
+		fprintf(stderr, "USAGE: %s ARGS...\nWhere ARGS will be the elements inserted in the list\nInvalid integers => 0\n", argv[0]);
+		return 1;
+	}
+	struct int_list l;
+	new(&l, argc - 1);
+
+	char **a = argv;
+	int n;
+	while(*++a) {
+		sscanf(*a, "%d", &n);
+		append(&l, n);
+	}
+	char *s = str(&l);
+	printf("str() =   \"%s\"\n", s);
+	printf("print() = \"");
+	print(&l);
+	printf("\"\n");
+	return 0;
 }
 

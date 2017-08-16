@@ -43,4 +43,9 @@ ou
 pour émuler un envoi de formulaire. Adaptez les valeurs de *CONTENT_LENGTH* pour qu'elle corrseponde
 (au minimum) à la valeur donnée en entrée du programme.
 
+## dossier JSON-parser
+
+Un simple parseur JSON.
+Ne fonctionne pas encore (`segfault` \o/)
+
 

@@ -5,15 +5,19 @@
 En l'occurence, mes programmes et ébauches de programmes en C,
 parce que j'ai envie d'apprendre le C.
 
-(Java étant un langage de *noob*.)
+(Java étant un langage pour les *noobs*.)
 
-## test_list_type.c
+Tous mes programmes sont rangés dans des sous-dossiers, chacun correspondant à un programme ou
+projet indépendant.
 
-Ce programme est une implémentation d'une liste d'entiers sous forme d'un `struct`,
+
+## dossier liste
+
+Ce dossier est une implémentation d'une liste d'entiers sous forme d'un `struct`,
 ça ressemeble beaucoup à de l'orienté objet, mais avec de la gestion de mémoir dynamique en plus,
 et des pointeurs : beaucoup plus fun.
 
-## C-CGI
+## dossier C-CGI
 
 Ce dossier contient une ébauche de programme *CGI* écrit en C.
 Il possède une interface simpliste, et permet d'afficher un texte rentré par l'utilisateur :

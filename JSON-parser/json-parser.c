@@ -31,25 +31,33 @@ void str(const JSON *json, char *dest) {
 		char *s;
 		switch(el->type) {
 			case 'b':
+				printf("booléen\n");
 				sprintf(elstr, ",\"%s\":%s", el->key, (*(int*)el->value) ? "true" : "false");
 				break;
 			case 'd':
-				sprintf(elstr, ",\"%s\":%d", el->key, *(double*)el->value);
+				printf("double\n");
+				sprintf(elstr, ",\"%f\":%s", el->key, *(double*)el->value);
 				break;
 			case 'f':
+				printf("flottant\n");
 				sprintf(elstr, ",\"%s\":%f", el->key, *(float*)el->value);
 				break;
 			case 'i':
-				sprintf(elstr, ",\"%s\":%i", el->key, *(int*)el->value);
+				printf("entier\n");
+				sprintf(elstr, ",\"%s\":%d", el->key, *(int*)el->value);
+				printf("je suis là\n");
 				break;
 			case 'j':
+				printf("JSON\n");
 				str((JSON*)el->value, s);
 				sprintf(elstr, ",\"%s\":%s", el->key, s);
 				break;
 			case 'l':
+				printf("long\n");
 				sprintf(elstr, ",\"%s\":%li", el->key, *(long*)el->value);
 				break;
 			case 's':
+				printf("chaîne\n");
 				sprintf(elstr, ",\"%s\":\"%s\"", el->key, (char*)el->value);
 				break;
 			case 'B':

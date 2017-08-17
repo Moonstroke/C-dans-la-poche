@@ -14,7 +14,7 @@ typedef struct {
 
 typedef struct {
 	JSON_element *data;
-	int size;
+	size_t size;
 } JSON;
 
 

@@ -14,7 +14,7 @@ projet indépendant.
 ## dossier liste
 
 Ce dossier est une implémentation d'une liste d'entiers sous forme d'un `struct`,
-ça ressemeble beaucoup à de l'orienté objet, mais avec de la gestion de mémoir dynamique en plus,
+ça ressemble beaucoup à de l'orienté objet, mais avec de la gestion de mémoire dynamique en plus,
 et des pointeurs : beaucoup plus fun.
 
 
@@ -48,7 +48,7 @@ pour émuler un envoi de formulaire. Adaptez les valeurs de *CONTENT_LENGTH* pou
 ## dossier JSON-parser
 
 Un simple parseur JSON.
-Ne fonctionne pas encore (`segfault` \o/)
+Ne fonctionne pas encore (`SEGFAULT` \o/)
 
 
 ## dossier Deadfish

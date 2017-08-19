@@ -51,3 +51,15 @@ Un simple parseur JSON.
 Ne fonctionne pas encore (`segfault` \o/)
 
 
+## dossier Deadfish
+
+Un interpréteur [Deadfish <sup>(en)</sup>](https://esolangs.org/wiki/Deadfish),
+un *langage ésotérique* des plus particuliers, mais aussi des plus simples à programmer :
+
+Il y a une valeur en mémoire, de valeur comprise entre 0 et 256, et quatre caractères-commandes :
+- `i`, qui incrémente la valeur,
+- `d`, qui décrémente la valeur,
+- `s`, qui porte la valeur au carré, et
+- `o`, qui affiche la valeur numérique de la valeur à l'écran.
+
+***C'EST TOUT***

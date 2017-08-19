@@ -63,3 +63,7 @@ Il y a une valeur en mémoire, de valeur comprise entre 0 et 256, et quatre cara
 - `o`, qui affiche la valeur numérique de la valeur à l'écran.
 
 ***C'EST TOUT***
+
+L'interpréteur peut lire un programme depuis la ligne de commande, ou s'il est lancé sans arguments,
+affiche un interpréteur interctif, avec comme *prompt*, `>> `.
+

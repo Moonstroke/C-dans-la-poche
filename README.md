@@ -65,5 +65,29 @@ Il y a une valeur en mémoire, de valeur comprise entre 0 et 256, et quatre cara
 ***C'EST TOUT***
 
 L'interpréteur peut lire un programme depuis la ligne de commande, ou s'il est lancé sans arguments,
-affiche un interpréteur interctif, avec comme *prompt*, `>> `.
+affiche un interpréteur interactif, avec comme *prompt*, `>> `.
+
+
+## dossier int-conv
+
+Un convertisseur d'entiers, de la base 2 à 36
+
+Utilisation :
+
+    $ gcc base.c
+    $ ./a.out <M>-<N> <INT_M>...
+
+avec `M` et `N` des entiers compris entre 2 et 36, inclus. Si `INT_M` vaut `--`, ou n'est pas fourni, les nombres
+sont lus sur l'entrée standard.
+
+Si `M` ou `N` n'est pas fournis, la base par défaut est 10.
+
+Donc, par exemple :
+
+    $ ./a.out 10-7 123
+    $ ./a.out -7 123
+    $ ./a.out -7 --
+    123
+
+sont identiques.
 
